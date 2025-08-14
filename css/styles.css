@@ -529,7 +529,7 @@ ul li {
 }
 
 .skill-card ul li::before {
-  content: "▸";
+  content: "•";
   color: #64b5f6;
   font-weight: bold;
   position: absolute;
@@ -603,6 +603,28 @@ ul li {
   margin-top: 15px;
   padding-top: 15px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #64b5f6, #42a5f5);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(100, 181, 246, 0.3);
+}
+
+.project-link:hover {
+  background: linear-gradient(135deg, #42a5f5, #2196f3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(100, 181, 246, 0.4);
+  color: white;
+  text-decoration: none;
 }
 
 .education-grid {

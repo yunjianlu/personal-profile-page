@@ -32,13 +32,15 @@ personal-profile/
 │   └── [planet images]     # Mercury, Venus, Earth, Mars, Jupiter, Saturn
 └── README.md
 ```
+
 ├── css
-│   └── styles.css
+│ └── styles.css
 ├── js
-│   └── script.js
+│ └── script.js
 ├── assets
-│   └── fonts
+│ └── fonts
 └── README.md
+
 ```
 
 ## Getting Started
@@ -62,3 +64,4 @@ Feel free to modify the HTML, CSS, and JavaScript files to personalize the profi
 ## License
 
 This project is open-source and available for anyone to use and modify.
+```
