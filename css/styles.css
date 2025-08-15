@@ -8,7 +8,23 @@ body {
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
-  position: relative;
+}
+
+header p {
+  color: #e1f5fe;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 5px 0;
+}
+
+.location {
+  color: #ffcc80 !important;
+  font-size: 1rem !important;
+  font-weight: 500;
+  margin: 8px 0 !important;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 body::before {
@@ -123,6 +139,7 @@ body::before {
   object-fit: contain;
   border-radius: 8px;
   transition: transform 0.3s ease, filter 0.3s ease;
+  opacity: 0.7;
 }
 
 .planet-image:hover {
@@ -194,6 +211,7 @@ header {
   background: transparent !important;
   border: none !important;
   border-radius: 0 !important;
+  opacity: 0.7;
 }
 
 .sun-section .planet-image:hover {
@@ -216,17 +234,25 @@ header {
   }
 
   .sun-section {
-    height: 150px;
+    height: 180px;
   }
 
   .sun-section .planet-image {
-    max-width: 140px;
-    max-height: 140px;
+    max-width: 160px;
+    max-height: 160px;
   }
 }
 
 .header-content {
   flex: 1;
+}
+
+.job-title .title-line {
+  display: inline;
+}
+
+.job-title .title-separator {
+  display: inline;
 }
 
 h1 {
@@ -247,20 +273,39 @@ header p {
   margin: 5px 0;
 }
 
+.location {
+  color: #ffcc80 !important;
+  font-size: 1rem !important;
+  font-weight: 500;
+  margin: 8px 0 !important;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 .contact-links {
   margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
 }
 
 .contact-links span {
   color: #e1f5fe;
-  margin-right: 15px;
   font-size: 0.95rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .contact-links a {
   color: #81d4fa;
   text-decoration: none;
   transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
 .contact-links a:hover {
@@ -368,6 +413,82 @@ section {
 }
 
 @media (max-width: 768px) {
+  /* Header mobile layout */
+  header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .header-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .header-content h1 {
+    font-size: 1.8rem;
+    margin: 0 0 8px 0;
+  }
+
+  .header-content p {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    margin: 5px 0;
+  }
+
+  .job-title .title-line {
+    display: block;
+  }
+
+  .job-title .title-separator {
+    display: none;
+  }
+
+  .location {
+    font-size: 1rem !important;
+    margin: 8px 0 12px 0 !important;
+    justify-content: center;
+  }
+
+  .header-right {
+    order: -1;
+    justify-content: center;
+  }
+
+  .contact-links {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .contact-links span {
+    font-size: 0.9rem;
+  }
+
+  .profile-img-header {
+    width: 120px;
+    height: 120px;
+  }
+
+  .sun-section {
+    height: 120px;
+  }
+
+  .sun-section .planet-image {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  /* Sections mobile layout */
   section {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -385,15 +506,6 @@ section {
   }
 
   .planet-image {
-    max-width: 100px;
-    max-height: 100px;
-  }
-
-  .sun-section {
-    height: 120px;
-  }
-
-  .sun-section .planet-image {
     max-width: 100px;
     max-height: 100px;
   }
@@ -716,14 +828,23 @@ ul li {
   font-size: 1rem;
 }
 
+.language-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
 .language {
   background: linear-gradient(135deg, #f06292, #e91e63);
   color: #ffffff;
-  padding: 6px 15px;
+  padding: 8px 16px;
   border-radius: 25px;
-  margin-right: 10px;
+  margin: 0;
   font-weight: 500;
   box-shadow: 0 2px 8px rgba(240, 98, 146, 0.3);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 footer {
